@@ -10,8 +10,16 @@
 </head>
 
 <body>
-    <h1> CGPLUS </h1>
-    <h2> Recommend TV Show List </h2>
+    <h1> CGPlus </h1>
+    <h2 id="visits"> Visitor textfield </h2>
+    <script>
+        function cb(response) {
+            var visited_num = response.value;
+            document.getElementById('visits').innerText = "Recommend TV Show List. " + visited_num + ' people visited!';
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/zodiacjake.netlify.app/visits?callback=cb"></script>
+
     <section>
         <h3> ON THE AIR </h3>
         <ul id="now-playing">
